@@ -31,7 +31,10 @@ def portfolio_details(request):
 
 def team(request):
     team = Team.objects.all
-    return render(request, 'home/team.html', {"team":team})
+    context = {
+        "team":team,
+    }
+    return render(request, 'home/team.html', context)
 
 def contact(request):
     if request.method == "POST":

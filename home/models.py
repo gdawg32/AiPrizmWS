@@ -24,7 +24,7 @@ class Service(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=100)
     designation = models.CharField(max_length=100)
-    photo = models.ImageField(upload_to="home/static/home/img/team", null=True, blank=True)
+    photo = models.ImageField(null=True, blank=True, upload_to="images/")
 
     # social media
     twitter = models.CharField(max_length=200, default="#")
